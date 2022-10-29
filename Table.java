@@ -172,7 +172,10 @@ public class Table
 
         List<Comparable[]> rows = new ArrayList<>();
 
-        // T O B E I M P L E M E N T E D
+        // Implementation of taking columns and adding to rows.
+        tuples.stream().filter(t -> {
+            rows.add(this.extract(t,attrs))
+        });
 
         return new Table(name + count++, attrs, colDomain, newKey, rows);
     } // project
